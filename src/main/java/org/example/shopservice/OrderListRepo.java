@@ -20,6 +20,15 @@ public class OrderListRepo {
         orders.remove(order);
     }
 
+    public Order searchOrder(Product searchedOrder){
+        for(Order order : orders){
+            if(searchedOrder.equals(order)){
+                return order;
+            }
+        }
+        return null;
+    }
+
     public List<Order> getOrders() {
         return orders;
     }
