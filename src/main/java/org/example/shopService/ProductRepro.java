@@ -5,10 +5,27 @@ import java.util.List;
 import java.util.Objects;
 
 public class ProductRepro {
-    List<Product> products = new ArrayList<>();
+    List<Product> products;
 
-    public ProductRepro(List<Product> products) {
-        this.products = products;
+    public ProductRepro() {
+        products = new ArrayList<>();
+    }
+
+    public void addProduct(Product product){
+        products.add(product);
+    }
+
+    public void deleteProduct(Product product){
+        products.remove(product);
+    }
+
+    public Product searchProduct(Product searchedProduct){
+        for(Product product : products){
+            if(searchedProduct.equals(product)){
+                return product;
+            }
+        }
+        return null;
     }
 
     public List<Product> getProducts() {
