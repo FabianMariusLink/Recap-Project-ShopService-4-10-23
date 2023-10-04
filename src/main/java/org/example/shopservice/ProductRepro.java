@@ -1,4 +1,4 @@
-package org.example.shopService;
+package org.example.shopservice;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +19,27 @@ public class ProductRepro {
         products.remove(product);
     }
 
+    public void deleteProductByName(String name){
+        for(Product product : products){
+            if(product.name().equals(name)){
+                products.remove(product);
+                break;
+            }
+        }
+    }
+
     public Product searchProduct(Product searchedProduct){
         for(Product product : products){
             if(searchedProduct.equals(product)){
+                return product;
+            }
+        }
+        return null;
+    }
+
+    public Product searchProductByName(String name){
+        for(Product product : products){
+            if(product.name().equals(name)){
                 return product;
             }
         }

@@ -1,4 +1,4 @@
-package org.example.shopService;
+package org.example.shopservice;
 
 import java.math.BigDecimal;
 
