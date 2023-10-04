@@ -16,7 +16,7 @@ public class ShopService {
             if(productsInStock){
                 orderListRepo.addOrder(new Order(UUID.randomUUID().toString(), customerName, orderProducts));
             }else{
-                System.out.println("Product(s) not in stock");
+                System.out.println("Product(s) not in stock!");
             }
     }
 }
